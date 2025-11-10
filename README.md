@@ -27,16 +27,7 @@ Backend-сервис для работы с валютными операция�
 2. Запустите PostgreSQL (можно через Docker):  
    `docker run --name currency-db -e POSTGRES_PASSWORD=yourpassword -p 5432:5432 -d postgres`
 
-3. Настройте параметры в `application.yml`:
-spring:
-datasource:
-url: jdbc:postgresql://localhost:5432/currency_db
-username: postgres
-password: yourpassword
-cbr:
-url: https://www.cbr-xml-daily.ru/daily_utf8.xml
-
-text
+3. Настройте параметры в `application.yml`
 
 4. Запустите приложение через IDE (main-класс) или Maven/Gradle:  
 `mvn spring-boot:run`  
@@ -54,8 +45,6 @@ text
 ...
 ]
 }
-
-text
 
 - Получить валюту по ID  
 `GET /api/currency/{id}`
